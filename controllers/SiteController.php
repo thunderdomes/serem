@@ -8,6 +8,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\Photo;
 use yii\helpers\Url;
 use Facebook\FacebookRedirectLoginHelper;
 use Facebook\FacebookRequest;
@@ -104,6 +105,35 @@ class SiteController extends Controller
         return $this->render('2');
     }
 
+    public function actionEdit($id)
+    {
+
+        Yii::$app->cloudinary;
+        $model = Photo::find($id)->one();
+        if ($model == NULL)
+            throw new HttpException(404, 'Model not found.');
+
+
+        $url = cloudinary_url($model->public_id);
+        return $this->render('3',[
+            'url' => $url,
+            'id'=>$id,
+        ]);
+    }
+
+    public function actionRandom($id)
+    {
+        Yii::$app->cloudinary;
+        $model = Photo::find($id)->one();
+        if ($model == NULL)
+            throw new HttpException(404, 'Model not found.');
+
+        echo cloudinary_url($model->public_id,[
+            'effect'=>'grayscale'
+        ]);
+    }
+
+
     public function actionTest()
     {   
         $this->cek(['/site/test']);   
@@ -117,7 +147,9 @@ class SiteController extends Controller
     public function actionTest3(){
         Yii::$app->cloudinary;
         $a = \Cloudinary\Uploader::upload("C:\\xampp\\htdocs\\polwan.jpg",['timestamp'=>time()]);
-        print_r($a);
+        $photo = new Photo();
+        $photo->attributes = $a;
+        $photo->save();
     }
 
     public function actionLogin()
