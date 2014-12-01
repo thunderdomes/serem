@@ -1,0 +1,354 @@
+/* Custom Fonts */
+@font-face {
+    font-family: 'signpainter';
+    src: url('../font/signpainter-housescript-webfont.eot');
+    src: url('../font/signpainter-housescript-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/signpainter-housescript-webfont.woff2') format('woff2'),
+         url('../font/signpainter-housescript-webfont.woff') format('woff'),
+         url('../font/signpainter-housescript-webfont.ttf') format('truetype'),
+         url('../font/signpainter-housescript-webfont.svg#signpaintermedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* =========================================================
+   $CLEARFIX
+============================================================ */
+.clear { clear: both; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0; }
+.group:after,
+.container:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.group { display: inline-block; }
+* html .group { height: 1%; } /* Hides from IE-mac \*/
+.group { display: block; }
+.group { *zoom: 1; }
+
+html { height: 100%; }
+body {
+	background: url(../images/bg-body.gif);
+	color: #fff;
+	font: 16px/1.5 Helvetica, Arial, sans-serif;
+	padding-bottom: 50px;
+	-webkit-font-smoothing: antialiased;
+}
+.pilih-foto {
+	background: url(../images/bg-1.gif) no-repeat;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.wrapper {
+	background: url(../images/bg-0.gif) no-repeat;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	box-shadow: 0 2px 2px rgba(0,0,0,.5);
+	padding-bottom: 50px;
+}
+.last .wrapper {
+	background: url(../images/bg-last.gif) top center no-repeat;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.foto { padding-bottom: 0; }
+.container {
+	margin: 0 auto;
+	position: relative;
+	width: 760px;
+}
+.header {
+	background: url(../images/bg-header.png) no-repeat;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	height: 204px;
+}
+.foto .header {
+	background: #000;
+	height: 74px;
+}
+.header h1 {
+	font-size: 22px;
+	margin: 0;
+	padding-top: 17px;
+	text-align: center;
+}
+.logo {
+	display: block;
+	padding-top: 35px;
+	text-align: center;
+}
+.foto .logo {
+	padding-top: 0;
+	position: absolute;
+	right: 0;
+	top: 15px;
+}
+.back {
+	background: url(../images/icon-back.png) left center no-repeat;
+	color: #fff;
+	float: left;
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 20px;
+	padding-left: 30px;
+	text-decoration: none;
+}
+
+.nav-tab { list-style: none; padding: 20px 0; text-align: center; }
+.nav-tab a {
+	background: rgba(0,0,0,.4);
+	border: 2px solid #fff;
+	border-radius: 10px;
+	color: #fff;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: bold;
+	height: 48px;
+	line-height: 48px;
+	text-align: center;
+	text-decoration: none;
+	width: 178px;
+}
+.nav-tab a:hover,
+.nav-tab a.active {
+	background: #fff;
+	color: #000;
+}
+
+.main { text-align: center; }
+.pilih-foto .main { margin-top: 80px; }
+.large { font-size: 30px; }
+.twocol .col {
+	display: inline-block;
+	margin: 0 20px;
+	vertical-align: top;
+}
+.twocol .pic {
+	background: url(../images/bg-pic.png) no-repeat;
+	box-shadow: 0 5px 13px rgba(0,0,0,3);
+	height: 207px;
+	width: 258px;
+}
+.twocol img {
+	display: block;
+	margin: 5px auto 0;
+}
+.caption p {
+	color: #000;
+	font: 22px 'signpainter';
+	margin: 10px 10px 0;
+	text-align: left;
+}
+.content {
+	background: #302e2c url(../images/bg-content.gif) no-repeat;
+	background-size: 100%;
+	padding-top: 70px;
+}
+.content h2,
+.content h3 {
+	font-family: 'signpainter';
+	margin: 0;
+	text-align: center;
+}
+.content h2 {
+	color: #f1a005;
+	font-size: 85px;
+}
+.content h3 {
+	color: #fff32f;
+	font-size: 45px;
+	padding-top: 40px;
+}
+.content p { font-size: 22px; }
+.content .like {
+	background: url(../images/icon-like.png) left center no-repeat;
+	padding: 15px 0 15px 70px;
+}
+.content .share {
+	background: url(../images/icon-share.png) left center no-repeat;
+	padding: 15px 0 15px 70px;
+}
+.btn {
+	box-shadow: 0 5px 5px rgba(0,0,0,.2),
+				0 1px 0 rgba(255,255,255,.3) inset;
+	color: #fff;
+	display: block;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.btn-cta {
+	background-color: #0c5fd8;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(12, 95, 216)), to(rgb(11, 69, 152)));
+	background-image: -webkit-linear-gradient(top, rgb(12, 95, 216), rgb(11, 69, 152));
+	background-image: -moz-linear-gradient(top, rgb(12, 95, 216), rgb(11, 69, 152));
+	background-image: -o-linear-gradient(top, rgb(12, 95, 216), rgb(11, 69, 152));
+	background-image: -ms-linear-gradient(top, rgb(12, 95, 216), rgb(11, 69, 152));
+	background-image: linear-gradient(top, rgb(12, 95, 216), rgb(11, 69, 152));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#0c5fd8', EndColorStr='#0b4598');
+	border-radius: 75px;
+	font-size: 26px;
+	height: 75px;
+	line-height: 75px;
+	margin: 55px auto 10px;
+	width: 410px;
+}
+.btn-cta:hover {
+	background-color: #0b6af2;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(11, 106, 242)), to(rgb(11, 69, 152)));
+	background-image: -webkit-linear-gradient(top, rgb(11, 106, 242), rgb(11, 69, 152));
+	background-image: -moz-linear-gradient(top, rgb(11, 106, 242), rgb(11, 69, 152));
+	background-image: -o-linear-gradient(top, rgb(11, 106, 242), rgb(11, 69, 152));
+	background-image: -ms-linear-gradient(top, rgb(11, 106, 242), rgb(11, 69, 152));
+	background-image: linear-gradient(top, rgb(11, 106, 242), rgb(11, 69, 152));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#0b6af2', EndColorStr='#0b4598');
+}
+.btn-cta:active {
+	background-color: #0b4598;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(11, 69, 152)), to(rgb(12, 95, 216)));
+	background-image: -webkit-linear-gradient(top, rgb(11, 69, 152), rgb(12, 95, 216));
+	background-image: -moz-linear-gradient(top, rgb(11, 69, 152), rgb(12, 95, 216));
+	background-image: -o-linear-gradient(top, rgb(11, 69, 152), rgb(12, 95, 216));
+	background-image: -ms-linear-gradient(top, rgb(11, 69, 152), rgb(12, 95, 216));
+	background-image: linear-gradient(top, rgb(11, 69, 152), rgb(12, 95, 216));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#0b4598', EndColorStr='#0c5fd8');
+}
+.btn-facebook,
+.btn-twitter {
+	border-radius: 52px;
+	display: inline-block;
+	font-size: 18px;
+	height: 52px;
+	line-height: 52px;
+	margin: 25px 10px 0;
+	width: 290px;
+}
+.btn-facebook {
+	background-color: #0c5fd8;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(12, 95, 216)), to(rgb(11, 69, 152)));
+	background-image: -webkit-linear-gradient(top, rgb(12, 95, 216), rgb(11, 69, 152));
+	background-image: -moz-linear-gradient(top, rgb(12, 95, 216), rgb(11, 69, 152));
+	background-image: -o-linear-gradient(top, rgb(12, 95, 216), rgb(11, 69, 152));
+	background-image: -ms-linear-gradient(top, rgb(12, 95, 216), rgb(11, 69, 152));
+	background-image: linear-gradient(top, rgb(12, 95, 216), rgb(11, 69, 152));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#0c5fd8', EndColorStr='#0b4598');
+}
+.btn-twitter {
+	background-color: #128fe3;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(18, 143, 227)), to(rgb(13, 105, 168)));
+	background-image: -webkit-linear-gradient(top, rgb(18, 143, 227), rgb(13, 105, 168));
+	background-image: -moz-linear-gradient(top, rgb(18, 143, 227), rgb(13, 105, 168));
+	background-image: -o-linear-gradient(top, rgb(18, 143, 227), rgb(13, 105, 168));
+	background-image: -ms-linear-gradient(top, rgb(18, 143, 227), rgb(13, 105, 168));
+	background-image: linear-gradient(top, rgb(18, 143, 227), rgb(13, 105, 168));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#128fe3', EndColorStr='#0d69a8');
+}
+.btn-facebook span {
+	background: url(../images/icon-facebook.png) left center no-repeat;
+	margin-left: 20px;
+	padding: 20px;
+}
+.btn-twitter span {
+	background: url(../images/icon-twitter.png) left center no-repeat;
+	margin-left: 30px;
+	padding: 30px;
+}
+
+.facebook, .webcam {
+	border-radius: 15px;
+	color: #fff;
+	font-size: 18px;
+	height: 214px;
+	width: 214px;
+	box-shadow: 0 2px 5px rgba(0,0,0,.3),
+				0 2px 5px rgba(255,255,255,.3) inset;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.facebook span, .webcam span {
+	display: block;
+	margin-top: 50px;
+}
+.facebook {
+	background-color: #2e9ed6;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(46, 158, 214)), to(rgb(18, 50, 138)));
+	background-image: -webkit-linear-gradient(top, rgb(46, 158, 214), rgb(18, 50, 138));
+	background-image: -moz-linear-gradient(top, rgb(46, 158, 214), rgb(18, 50, 138));
+	background-image: -o-linear-gradient(top, rgb(46, 158, 214), rgb(18, 50, 138));
+	background-image: -ms-linear-gradient(top, rgb(46, 158, 214), rgb(18, 50, 138));
+	background-image: linear-gradient(top, rgb(46, 158, 214), rgb(18, 50, 138));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#2e9ed6', EndColorStr='#12328a');
+}
+.webcam {
+	background-color: #c2c2c2;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(194, 194, 194)), to(rgb(83, 83, 83)));
+	background-image: -webkit-linear-gradient(top, rgb(194, 194, 194), rgb(83, 83, 83));
+	background-image: -moz-linear-gradient(top, rgb(194, 194, 194), rgb(83, 83, 83));
+	background-image: -o-linear-gradient(top, rgb(194, 194, 194), rgb(83, 83, 83));
+	background-image: -ms-linear-gradient(top, rgb(194, 194, 194), rgb(83, 83, 83));
+	background-image: linear-gradient(top, rgb(194, 194, 194), rgb(83, 83, 83));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#c2c2c2', EndColorStr='#535353');
+	color: #2f2f2f;
+	font-weight: bold;
+	text-shadow: 0 1px rgba(255,255,255,.3);
+}
+
+.foto-saya img {
+	border: 5px solid #fff;
+	box-shadow: 0 1px 3px rgba(0,0,0,.2);
+}
+
+/* Gallery */
+.gallery {
+	border-top: 2px solid #3c3c3c;
+	margin-top: 2px;
+}
+.gallery ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.gallery li {
+	float: left;
+	margin-bottom: 30px;
+	margin-right: 30px;
+}
+.gallery li:nth-child(4n+4) { margin-right: 0; }
+/*.gallery li:nth-last-child(-n+4) { margin-bottom: 0; }*/
+.gallery a { text-decoration: none; }
+.gallery img {
+	box-shadow: 0 1px 3px rgba(0,0,0,.2);
+}
+.gallery .border img {
+	border: 5px solid #fff;
+	box-shadow: 0 4px 8px rgba(0,0,0,.7);
+}
+.gallery span {
+	color: #949494;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+}
+.scroll .container {
+	position: absolute;
+    width: 780px;
+    height: 100%;
+    top: 200px;
+    left: 50%;
+    margin-left: -390px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.overview { height: auto; }
+.scrollable.default-skin .scroll-bar.vertical { width: 8px !important; }
+.scrollable.default-skin .scroll-bar .thumb { background: #5a5a5a !important; }
+.faux {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 254, 244, 0.00)), to(rgba(3, 3, 3, 1.00)));
+	background-image: -webkit-linear-gradient(top, rgba(255, 254, 244, 0.00), rgba(3, 3, 3, 1.00));
+	background-image: -moz-linear-gradient(top, rgba(255, 254, 244, 0.00), rgba(3, 3, 3, 1.00));
+	background-image: -o-linear-gradient(top, rgba(255, 254, 244, 0.00), rgba(3, 3, 3, 1.00));
+	background-image: -ms-linear-gradient(top, rgba(255, 254, 244, 0.00), rgba(3, 3, 3, 1.00));
+	background-image: linear-gradient(top, rgba(255, 254, 244, 0.00), rgba(3, 3, 3, 1.00));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#fffef4', EndColorStr='#2e2e2e');
+	display: block;
+	width: 100%;
+	height: 100px;
+	position: fixed;
+	bottom: 0;
+}
