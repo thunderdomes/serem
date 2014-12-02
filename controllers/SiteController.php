@@ -146,7 +146,7 @@ class SiteController extends Controller
 
     public function actionTest3(){
         Yii::$app->cloudinary;
-        $a = \Cloudinary\Uploader::upload("C:\\xampp\\htdocs\\polwan.jpg",['timestamp'=>time()]);
+        $a = \Cloudinary\Uploader::upload("http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg",['timestamp'=>time()]);
         $photo = new Photo();
         $photo->attributes = $a;
         $photo->save();
