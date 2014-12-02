@@ -91,7 +91,7 @@ body {
 }
 
 .nav-tab { list-style: none; padding: 20px 0; text-align: center; }
-.nav-tab a {
+.nav-tab a,.nav-tab button {
 	background: rgba(0,0,0,.4);
 	border: 2px solid #fff;
 	border-radius: 10px;
@@ -106,7 +106,7 @@ body {
 	width: 178px;
 }
 .nav-tab a:hover,
-.nav-tab a.active {
+.nav-tab a.active,.nav-tab button:hover,.nav-tab button.active {
 	background: #fff;
 	color: #000;
 }

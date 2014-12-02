@@ -105,11 +105,24 @@ class SiteController extends Controller
         return $this->render('2');
     }
 
+    public function actionWebcam()
+    {
+        if(isset($_POST['foto'])){
+            Yii::$app->cloudinary;
+            $a = \Cloudinary\Uploader::upload($_POST['foto'],['timestamp'=>time()]);
+            $photo = new Photo();
+            $photo->attributes = $a;
+            $photo->save();
+            return $this->redirect(['/site/edit','id'=>$photo->id]); 
+        }
+        return $this->render('webcam');
+    }
+
     public function actionEdit($id)
     {
 
         Yii::$app->cloudinary;
-        $model = Photo::find($id)->one();
+        $model = Photo::findOne($id);
         if ($model == NULL)
             throw new HttpException(404, 'Model not found.');
 
@@ -124,7 +137,7 @@ class SiteController extends Controller
     public function actionRandom($id)
     {
         Yii::$app->cloudinary;
-        $model = Photo::find($id)->one();
+        $model = Photo::findOne($id);
         if ($model == NULL)
             throw new HttpException(404, 'Model not found.');
 

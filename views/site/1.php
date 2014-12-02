@@ -13,7 +13,7 @@ use yii\helpers\Url;
 						<p>Foto Facebook</p>
 					</span>
 				</a>
-				<a href="#" class="webcam col">
+				<a href="<?= Url::to(['site/webcam']) ?>" class="webcam col">
 					<span>
 						<img src="images/icon-cam.png" alt="">
 						<p>Dari Webcam</p>
