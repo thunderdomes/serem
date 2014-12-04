@@ -141,11 +141,21 @@ class SiteController extends Controller
         if ($model == NULL)
             throw new HttpException(404, 'Model not found.');
 
-        echo cloudinary_url($model->public_id,[
-            'effect'=>'grayscale'
-        ]);
+        echo cloudinary_url($model->public_id,Yii::$app->cloudinary->acakEfek());
     }
 
+    public function actionUploadframe()
+    {
+        $file = \Yii::getAlias('@webroot').'/frame.png';
+        Yii::$app->cloudinary;
+        $a = \Cloudinary\Uploader::upload($file,['timestamp'=>time()]);
+        $photo = new Photo();
+        $photo->attributes = $a;
+        $photo->save();
+
+        $setting = Yii::$app->setting->set('photo', 'frame', $photo->public_id);
+        Yii::$app->setting->commit();
+    }
 
     public function actionTest()
     {   
@@ -155,14 +165,6 @@ class SiteController extends Controller
     public function actionTest2()
     {
         Yii::$app->facebook->clearSession();
-    }
-
-    public function actionTest3(){
-        Yii::$app->cloudinary;
-        $a = \Cloudinary\Uploader::upload("http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg",['timestamp'=>time()]);
-        $photo = new Photo();
-        $photo->attributes = $a;
-        $photo->save();
     }
 
     public function actionLogin()

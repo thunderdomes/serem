@@ -49,6 +49,9 @@ $config = [
             'key' =>'852359832711834',
             'secret' =>'TB1Y3VW6j0bclaiyHBb28bDi-H0',
         ],
+        'setting' => [
+            'class' => 'dinhtrung\setting\Setting',
+        ]
     ],
     'modules' => [
     ],

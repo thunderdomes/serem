@@ -25,7 +25,7 @@ WebcamAsset::register($this);
 			    'id' => 'web-form',
 			    'options' => ['class' => 'form-horizontal'],
 			]) ?>
-				<div class="foto-saya" id="foto-webcam" style="height:300px;width:400px">
+				<div class="foto-saya" id="foto-webcam" style="height:500px;width:500px">
 				</div>
 				<div id="gallery"></div>
 				<div class="nav-tab">

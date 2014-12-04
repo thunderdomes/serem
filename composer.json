@@ -19,7 +19,8 @@
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "*",
         "facebook/php-sdk-v4" : "4.0.*",
-        "cloudinary/cloudinary_php": "dev-master"
+        "cloudinary/cloudinary_php": "dev-master",
+        "dinhtrung/yii2-setting": "@dev"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
