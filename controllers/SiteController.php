@@ -102,6 +102,7 @@ class SiteController extends Controller
 
     public function actionPick()
     {
+        $this->cek(['/site/pick']);
         return $this->render('2');
     }
 
